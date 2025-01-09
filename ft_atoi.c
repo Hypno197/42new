@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+
 static int	ft_isspace(char str)
 {
 	if (str == ' ' || str == '\n' || str == '\f')
@@ -47,10 +48,10 @@ int	ft_atoi(char *str)
 	return (r * sign);
 }
 /*
-int main(void)
+int	main(void)
 {
-    printf("Real atoi: %d\n", atoi("21474836472"));
-    printf("My atoi: %d\n", ft_atoi("21474836472"));
-    return 0;
+	printf("Real atoi: %d\n", atoi("21474836472"));
+	printf("My atoi: %d\n", ft_atoi("21474836472"));
+	return (0);
 }
 */
