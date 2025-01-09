@@ -1,3 +1,4 @@
+#include <stddef.h>
 char *ft_strchr(char *str, char c)
 {
 	while(str)

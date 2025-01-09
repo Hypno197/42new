@@ -15,10 +15,10 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size)
     dst[i] = '\0';
     while(src[i])
         i++;
-    return (size_t)i ;
-    //return (size_t)(i * sizeof(char));
+    //return (size_t)i ;
+    return (size_t)(i * sizeof(char));
 }
-
+/*
 void test(int size) {
     char string[] = "Hello there, Venus";
     char buffer[20] = "xxxxxxxxxxxxxxxxxxx";
@@ -36,3 +36,4 @@ int main() {
     test(0);
     return 0;
 }
+*/

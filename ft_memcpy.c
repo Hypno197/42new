@@ -18,7 +18,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     }
     return dest;
 }
-
+/*
 int main()
 {
     char str1[] = "Geeks";
@@ -35,3 +35,4 @@ int main()
 
     return 0;
 }
+*/

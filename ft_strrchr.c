@@ -1,3 +1,4 @@
+#include <stddef.h>
 char *ft_strrchr(char *str, char c)
 {
 	char *s;
