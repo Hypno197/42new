@@ -13,6 +13,28 @@
 #include <stdio.h>
 #include <string.h>
 
+size_t ft_strlcat(char *dst, const char *src, size_t size)
+{
+    size_t dst_len = 0;
+    size_t src_len = 0;
+    size_t i = 0;
+
+    while (dst[dst_len] != '\0' && dst_len < size)
+        dst_len++;
+    while (src[src_len] != '\0')
+        src_len++;
+    if (size <= dst_len)
+        return size + src_len;
+    while (src[i] != '\0' && (dst_len + i + 1) < size)
+    {
+        dst[dst_len + i] = src[i];
+        i++;
+    }
+    if (dst_len + i < size)
+        dst[dst_len + i] = '\0';
+    return dst_len + src_len;
+}
+/*
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	int	i;
@@ -22,7 +44,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	j = 0;
 	while (dst[j] != '\0')
 		j++;
-	while (size > 1 && src[i] != '\0')
+	while (size > 1 && src[i] != '\0' || size >)
 	{
 		dst[j + i] = src[i];
 		size--;
@@ -33,6 +55,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	return (j + i);
 }
+*/
+
 /*
 void	test(int size) {
 	char dst[] = "this is ";

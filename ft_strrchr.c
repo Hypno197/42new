@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 11:01:30 by marvin            #+#    #+#             */
-/*   Updated: 2025/01/09 11:01:30 by marvin           ###   ########.fr       */
+/*   Updated: 2025/01/09 11:56:40 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(char *str, char c)
 	char	*s;
 
 	s = NULL;
-	while (str)
+	while (*str)
 	{
 		if (*str == c)
 			s = str;

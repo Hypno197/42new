@@ -17,6 +17,30 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char		*d1;
 	const char	*s1;
+
+	d1 = (char *)dest;
+	s1 = (const char *)src;
+	if (d1 > s1 && d1 < s1 + n)
+	{
+		while (n > 0)
+		{
+			n--;
+			d1[n] = s1[n];
+		}
+	}
+	else
+		while (n > 0)
+		{
+			*d1++ = *s1++;
+			n--;
+		}
+	return dest;
+}
+/*
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	char		*d1;
+	const char	*s1;
 	int			i;
 
 	d1 = dest;
@@ -30,6 +54,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+*/
 /*
 int	main(void)
 {
