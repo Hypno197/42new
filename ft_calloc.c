@@ -10,31 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <stdlib.h>
- #include <stddef.h>
+#include <stddef.h>
+#include <stdlib.h>
 
-void    *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    char *s;
-    size_t i;
+	char	*s;
+	size_t	i;
 
-    i = 0;
-    if(nmemb > 0 && size > 0 && nmemb * size <= 2147483647)
-    {
-    s = malloc(nmemb*size);
-    while(i < nmemb * size)
-    {
-        s[i] = 0;
-        i++;
-    }
-    return (void*)s;
-    }
-    return NULL;
+	i = 0;
+	if (nmemb > 0 && size > 0 && nmemb * size <= 2147483647)
+	{
+		s = malloc(nmemb * size);
+		while (i < nmemb * size)
+		{
+			s[i] = 0;
+			i++;
+		}
+		return ((void *)s);
+	}
+	return (NULL);
 }
 /*
-int main()
+int	main(void)
 {
-    ft_calloc(8, 8);
-    return 0;
+	ft_calloc(8, 8);
+	return (0);
 }
 */

@@ -34,7 +34,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			*d1++ = *s1++;
 			n--;
 		}
-	return dest;
+	return (dest);
 }
 /*
 void	*ft_memmove(void *dest, const void *src, size_t n)
